@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<link rel="stylesheet" href="visualization.css">
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+</head>
+<body>
+
+	<div class="dropdown">
+	  <button style=".text-left" class="dropbtn">Select Attribute to visualise</button>
+	  <div id='menu' class="dropdown-content">
+	    <a href="#" onclick="transition_bars_crmrte()">Crime Rates (North Carolina)</a>
+	    <a href="#" onclick="transition_bars_prbarr()">P(arrests)</a>
+	    <a href="#" onclick="transition_bars_prbconv()">P(conviction)</a>
+			<a href="#" onclick="transition_bars_prbpris()">P(prison sentence)</a>
+			<a href="#" onclick="transition_bars_avgsendays()">avg sentence days</a>
+			<a href="#" onclick="transition_bars_polpc()">Police per capita</a>
+			<a href="#" onclick="transition_bars_pctymle()">% of young males</a>
+			<a href="#" onclick="transition_bars_pctmin()">% minority</a>
+			<a href="#" onclick="transition_bars_density()">Density of people</a>
+			<a href="#" onclick="transition_bars_taxpc()">Tax per capita</a>
+	  </div>
+	</div>
+
+<div class="center-head" id='head'>Crime Rates (North Carolina)</div><br>
+
+<div class="center-div-radio" id='buttons'>
+<input  id='bar_button' onChange="bar_select()" checked='true' type="radio" name="type" value="bar"> Bar Chart
+  <input id='pie_button' onChange="bar_select()" type="radio" name="type" value="pie"> Pie Chart
+	<input id='fdl_button' onChange="bar_select()" type="radio" name="type" value="pie"> Force Directed Layout
+</div>
+</body>
+
+<script src="visualization.js"></script>
+
+</html>
